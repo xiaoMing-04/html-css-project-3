@@ -1,0 +1,755 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: normal;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* =================== common =================== */
+
+:root {
+    --primary-color: #1ebfc1;
+}
+
+.content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 186px;
+    text-align: center;
+    color: #fff;
+    background: var(--primary-color);
+    line-height: 68px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+}
+
+.heading {
+    color: #0d1111;
+    font-weight: 700;
+}
+
+.lv1 {
+    font-size: 6.2rem;
+    line-height: 1.16;
+}
+
+.lv2 {
+    font-size: 4.2rem;
+    line-height: 1.33;
+}
+
+.lv3 {
+    font-size: 2.2rem;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.opacity-hover:hover {
+    opacity: 0.9;
+}
+
+.box-shadow {
+    box-shadow: 0px 12px 80px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================== header ================== */
+
+.nav-bar {
+    position: sticky;
+    top: -44px;
+    z-index: 1;
+}
+
+.nav-bar .content {
+    padding-top: 52px;
+    padding-bottom: 8px;
+}
+
+.nav-bar .body {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .list {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-bar .active-item {
+    font-weight: 600;
+}
+
+.nav-bar .item {
+    padding: 6px 19.5px;
+}
+
+.nav-bar .link {
+    color: #494949;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-left: 177px;
+    margin-right: 24px;
+}
+
+.nav-bar .link:hover {
+    text-decoration: underline;
+}
+
+.nav-bar .btn-cta {
+    background: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    min-width: 108px;
+    line-height: 48px;
+}
+
+.nav-bar .item a {
+    color: #2f3a3b;
+}
+
+.nav-bar .item a:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+}
+
+/* ==================== hero ==================== */
+
+.hero .content {
+    padding-top: calc(50px - 8px);
+    padding-bottom: 79px;
+}
+
+.hero .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .info {
+    width: 39.14%;
+}
+
+.hero .images {
+    width: 49.23%;
+    position: relative;
+}
+
+.hero .images .big-img {
+    width: 100%;
+    height: 631px;
+    object-fit: cover;
+}
+
+.hero .info .slogan {
+    color: #767e7e;
+    padding-bottom: 18px;
+}
+
+.hero .info .desc {
+    color: #9da6a5;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    padding-top: 46px;
+    width: 81.65%;
+}
+
+.hero .info .play {
+    display: flex;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    cursor: pointer;
+}
+
+.hero .info .arrow {
+    width: 14px;
+    height: 18px;
+    background: var(--primary-color);
+    clip-path: polygon(0 0, 14px 9px, 0 18px);
+    margin: auto;
+}
+
+.hero .info .row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-top: 52px;
+}
+
+/* students */
+.hero .students {
+    width: 207px;
+    height: 90px;
+    background: #fefefd;
+    border-radius: 24px;
+    padding: 17px 39px 17px 35px;
+    position: absolute;
+    right: 45px;
+    bottom: 41px;
+}
+
+.hero .box-title {
+    display: block;
+    color: #0d1111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hero .students .list {
+    margin-top: 8px;
+    display: flex;
+}
+
+.hero .students .item {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.hero .students .number {
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .students .item+.item {
+    margin-left: -8px;
+}
+
+/* schedules */
+.hero .schedules {
+    width: 124px;
+    height: 132px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 16px 25px 23px;
+    position: absolute;
+    bottom: 46px;
+    left: -65px;
+}
+
+.hero .schedules .column {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero .schedules .row {
+    width: 74px;
+    height: 6px;
+    background: #edf1f5;
+    border-radius: 12px;
+}
+
+.hero .schedules .box-title {
+    text-align: center;
+}
+
+.hero .schedules .sub-row {
+    width: 0%;
+    height: 100%;
+    background: #fb9899;
+    border-radius: 12px;
+}
+
+.hero .schedules .row:first-child .sub-row {
+    width: 50%;
+}
+
+.hero .schedules .row:nth-child(2) .sub-row {
+    width: 70%;
+}
+
+.hero .schedules .row:nth-child(3) .sub-row {
+    width: 40%;
+}
+
+.hero .schedules .row:nth-child(4) {
+    width: 26px;
+}
+
+/* courses number */
+.hero .courses-num {
+    width: 157px;
+    height: 75px;
+    border-radius: 18px;
+    background: #fefefd;
+    padding: 17px 25px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    top: 149px;
+    left: -40px;
+}
+
+.hero .box {
+    background: #ff8282;
+    width: 36px;
+    height: 40px;
+    border-radius: 6px 2px 2px 6px;
+    position: relative;
+}
+
+.hero .box .row {
+    width: 28px;
+    height: 4px;
+    background: #fefefd;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 8px;
+    border-radius: 12px;
+}
+
+.hero .courses-num .box-title {
+    display: inline-block;
+    width: 55px;
+}
+
+/* ================= features ==================== */
+
+.features {
+    margin-top: 130px;
+}
+
+.features .body {
+    width: 1024px;
+}
+
+.features .title {
+    color: #767e7e;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.features .head {
+    width: 57%;
+}
+
+.features .heading {
+    padding: 18px 0;
+}
+
+.features .head .desc {
+    color: #767e7e;
+    font-size: 1.8rem;
+}
+
+.features .list {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    padding-top: 80px;
+}
+
+.features .item:first-child {
+    width: 168px;
+}
+
+.features .item:nth-child(3),
+.features .item:nth-child(2) {
+    width: 224px;
+}
+
+.features .item .sub-title {
+    color: #0d1111;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 26px;
+}
+
+.features .item .small-desc {
+    color: #9da6a5;
+    line-height: 1.68;
+    padding-top: 16px;
+    --line-clamp: 4;
+}
+
+/* =================== courses ===================== */
+
+.courses {
+    margin-top: 130px;
+}
+
+.courses .title {
+    color: #767e7e;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.courses .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+}
+
+.courses .row .desc {
+    color: #767e7e;
+    font-size: 1.8rem;
+    line-height: 1.78;
+    width: 44.87%;
+}
+
+.courses .row .link {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.courses .row .link:hover {
+    text-decoration: underline;
+}
+
+/* list */
+.courses .list {
+    display: flex;
+    gap: 47px;
+    justify-content: space-between;
+    padding-top: 79px;
+}
+
+.courses .list .item {
+    flex: 1;
+    background: #d0efed;
+    border-radius: 8px;
+    position: relative;
+}
+
+.courses .item .img {
+    width: 100%;
+    height: 393px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.35;
+}
+
+/* table */
+.courses .table {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px 25px 29px;
+    box-shadow: 0px 16px 90px 0px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 17px;
+    right: 17px;
+    bottom: -71px;
+}
+
+.courses .table .small-desc {
+    color: #9da6a5;
+    font-size: 1.4rem;
+}
+
+.courses .table .price {
+    padding-top: 16px;
+    padding-bottom: 6px;
+}
+
+.courses .table .small-row span::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.courses .table .small-row span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.courses .table .small-row {
+    display: flex;
+    gap: 10px;
+    padding-top: 18px;
+}
+
+/* ========================== stats ==================== */
+
+.stats {
+    margin-top: 265px;
+}
+
+.stats .content {
+    width: 862px;
+}
+
+.stats .number {
+    color: #0d1111;
+    font-size: 6.2rem;
+    font-weight: 700;
+}
+
+.stats .desc {
+    color: #767e7e;
+    font-size: 1.8rem;
+}
+
+.stats .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .item {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+/* ====================== feedback ====================== */
+
+.feedback {
+    margin-top: 264px;
+}
+
+.feedback .content {
+    height: 481px;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.feedback .quote {
+    color: #5d6564;
+    font-size: 3.2rem;
+    line-height: 1.5;
+    padding-top: 27px;
+    --line-clamp: 4;
+}
+
+.feedback .author {
+    color: #767e7e;
+    padding-top: 33px;
+}
+
+.feedback .name {
+    color: #070707;
+    font-weight: 500;
+}
+
+.feedback .info .row {
+    display: flex;
+    padding-top: 52px;
+    gap: 30px;
+}
+
+.feedback .info .btn-cta {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback .info .btn-cta:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.feedback .info {
+    width: 35.81%;
+}
+
+.feedback .images {
+    position: relative;
+    width: 58.03%;
+    height: 100%;
+}
+
+/* avt */
+.feedback .avt {
+    border-radius: 50%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.feedback .avt-4,
+.feedback .avt-5,
+.feedback .avt-6 {
+    width: 78px;
+    height: 78px;
+}
+
+.feedback .avt-1 {
+    width: 92px;
+    height: 92px;
+}
+
+.feedback .avt-2 {
+    width: 110px;
+    height: 110px;
+}
+
+.feedback .avt-3 {
+    width: 235px;
+    height: 235px;
+}
+
+.feedback .avt-1 {
+    top: 0;
+    left: 144px;
+}
+
+.feedback .avt-2 {
+    right: 0;
+    top: 19px;
+}
+
+.feedback .avt-4 {
+    left: 0;
+    bottom: 145px;
+}
+
+.feedback .avt-5 {
+    bottom: 0;
+    left: 212px;
+}
+
+.feedback .avt-6 {
+    right: 32px;
+    bottom: 29px;
+}
+
+.feedback .avt-3 {
+    left: 273px;
+    top: 107px;
+}
+
+
+.feedback .feedback-list {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item {
+    visibility: hidden;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.feedback .active {
+    visibility: visible;
+    transform: translateX(-100%);
+}
+
+
+/* ================== register ===================== */
+
+.register {
+    margin-top: 130px;
+    background: #edf6f5;
+}
+
+.register .content {
+    padding-top: 76px;
+    padding-bottom: 88px;
+}
+
+.register .desc {
+    color: #767e7e;
+    font-size: 1.8rem;
+    padding-top: 18px;
+}
+
+.register .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register .btn-cta {
+    height: 68px;
+}
+
+/* ===================== footer ================ */
+
+.footer .content {
+    padding-top: 131px;
+    padding-bottom: 50px;
+}
+
+.footer .body {
+    display: flex;
+    gap: 144px;
+}
+
+.footer .item {
+    color: #2e2e2e;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.footer .sub-item a:hover {
+    text-decoration: underline;
+}
+
+.footer .sub-item a {
+    display: block;
+    color: #535353;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.footer .list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer .sub-list {
+    padding-top: calc(26px - 10px);
+}
+
+.footer .sub-item .social {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
